@@ -16,9 +16,7 @@ The problem is to park the car with following logics:
 * A small vehicle can be parked in the small slot, middle slot and large slot.
 A large slot can afford two small vehicle. A small vehicle should be first parked into a
 large slot which has already parked one small vehicle. Then the small slot is considered, then the middle slot.
-* A tiny vehicle can be parked int the tiny slot, small slot, middle slot and large slot. A large slot can afford 3
-tiny vehicle. A tiny vehicle should be parked to the large slot which has two tiny vehicle, and that has one tiny slot,
-then the tiny slot, then the small slot, then the middle slot, and then the large slot
+* A tiny vehicle can be parked int the small slot
 
 ###  环境
 * scala 2.11.8

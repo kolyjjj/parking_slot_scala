@@ -79,5 +79,10 @@ class ParkingSlotManagerTest extends FunSpec {
       assert(parkingSlotManager.park(Vehicle(MIDDLE_VEHICLE)).isEmpty)
     }
 
+    it("should park tiny vehicle to small slot") {
+      val parkingSlotManager: ParkingSlotManager = newParkingSlotManager()
+      assert(parkingSlotManager.park(Vehicle(TINY_VEHICLE)).get == Ticket(Slot(6, SlotSize(1, SMALL_SPACE), SlotSize(0, SMALL_SPACE))))
+    }
+
   }
 }

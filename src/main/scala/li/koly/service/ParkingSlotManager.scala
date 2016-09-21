@@ -37,6 +37,7 @@ private class ParkingSlotManager(val largeSlots: List[Slot], middleSlots: List[S
       case Vehicle(LARGE_VEHICLE) => largeSlots
       case Vehicle(MIDDLE_VEHICLE) => middleSlots ++ largeSlots
       case Vehicle(SMALL_VEHICLE) => smallSlots ++ largeSlots.filter(_.availableSize == SlotSize(1, SMALL_SPACE)) ++ middleSlots ++ largeSlots
+      case Vehicle(TINY_VEHICLE) => smallSlots ++ largeSlots.filter(_.availableSize == SlotSize(1, SMALL_SPACE)) ++ middleSlots ++ largeSlots
       case _ => throw new UnknownVehicleType(vehicle)
     }
     slotsForSearch.filter(_.availableSize.number != 0)
@@ -46,7 +47,8 @@ private class ParkingSlotManager(val largeSlots: List[Slot], middleSlots: List[S
   val vehicleSpace: Map[VehicleType, SlotSpace] = Map(
     LARGE_VEHICLE -> LARGE_SPACE,
     MIDDLE_VEHICLE -> MIDDLE_SPACE,
-    SMALL_VEHICLE -> SMALL_SPACE
+    SMALL_VEHICLE -> SMALL_SPACE,
+    TINY_VEHICLE -> SMALL_SPACE
   )
 }
 
