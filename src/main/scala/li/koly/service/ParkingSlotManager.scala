@@ -5,12 +5,6 @@ import li.koly.exception.UnknownVehicleType
 
 private class ParkingSlotManager(val largeSlots: List[Slot], middleSlots: List[Slot], smallSlots: List[Slot]) {
 
-  val vehicleSlotsMapping: Map[VehicleType, SlotSize] = Map(
-    LARGE_VEHICLE -> SlotSize(1, LARGE_SPACE),
-    MIDDLE_VEHICLE -> SlotSize(1, MIDDLE_SPACE),
-    SMALL_VEHICLE -> SlotSize(1, SMALL_SPACE)
-  )
-
   val originalSizeSlotsMapping: Map[SlotSize, List[Slot]] = Map(
     SlotSize(1, LARGE_SPACE) -> largeSlots,
     SlotSize(1, MIDDLE_SPACE) -> middleSlots,
