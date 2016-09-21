@@ -22,6 +22,12 @@ large slot which has already parked one small vehicle. Then the small slot is co
 * scala 2.11.8
 * sbt 0.13.8
 
+### 运行测试
+`sbt test`
+
+### 运行MainApp
+`sbt run`
+
 ### 说明
 * 入口文件为MainApp
 * 具体的类的文档请参考该类的测试
