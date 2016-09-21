@@ -1,7 +1,6 @@
 package li.koly.domain
 
-import com.sun.tools.corba.se.idl.InvalidArgument
-import li.koly.exception.NoConversionToLevel
+import li.koly.exception.{CannotBeSubtracted, NoConversionToLevel}
 
 // 1 large slot equals 3 tiny slots, 1 large - 1 tiny = 2 tinys
 // 2 middle slot equals 2 tiny slots, 2 middle - 1 tiny = 1 tiny
@@ -10,7 +9,7 @@ case class SlotSize(number: Int, slotSpace: SlotSpace) {
 
   def -(size: SlotSize): SlotSize = {
     val result = subtract(this, size)
-    if (result.number < 0) throw new InvalidArgument(size.toString) else result
+    if (result.number < 0) throw new CannotBeSubtracted(size.toString) else result
   }
 
   def >=(size: SlotSize): Boolean = {

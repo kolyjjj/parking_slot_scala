@@ -25,4 +25,5 @@ large slot which has already parked one small vehicle. Then the small slot is co
 ### 说明
 * 入口文件为MainApp
 * 具体的类的文档请参考该类的测试
+* Intellij Idea with scala plugin is used
 
