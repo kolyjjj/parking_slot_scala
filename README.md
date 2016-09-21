@@ -20,3 +20,11 @@ large slot which has already parked one small vehicle. Then the small slot is co
 tiny vehicle. A tiny vehicle should be parked to the large slot which has two tiny vehicle, and that has one tiny slot,
 then the tiny slot, then the small slot, then the middle slot, and then the large slot
 
+###  环境
+* scala 2.11.8
+* sbt 0.13.8
+
+### 说明
+* 入口文件为MainApp
+* 具体的类的文档请参考该类的测试
+
